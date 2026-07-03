@@ -16,6 +16,7 @@ Developed with a modular React architecture, a robust client-side heuristics eng
 *   **🔍 Resume Strength Auditor**: An automated review panel where students paste their achievements to receive an instant alignment score, highlight matching keywords, and pinpoint skill gaps with actionable roadmap additions.
 *   **🔑 Secure Session Authentication Portal**: Integrates a glassmorphic Login/Register gate checking email/password criteria and storing sessions safely in LocalStorage (JWT-handshake mockup) with a Secure Token Active status.
 *   **🎓 Technical Interview Simulator (Infosys Prep)**: A mock evaluation module where students solve technical conceptual questions for their target track and receive instant grades (out of 10), keyword alignment feedback, and senior-engineer model answers.
+*   **🛡️ Cybersecurity Threat & Cryptography Lab**: A dedicated, interactive security suite featuring: (1) **HTTP Header & SSL Auditor** to analyze raw response headers for missing security guards (CSP, HSTS, X-Frame-Options, XSS sniffing banners) with Express code recommendations, and (2) **Password Entropy & Hash Lab** calculating real-time Shannon Entropy bits, botnet GPU crack durations, and client-side SHA-256 digests via the Web Crypto API.
 
 ---
 

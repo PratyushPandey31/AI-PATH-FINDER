@@ -72,6 +72,76 @@ export const careersData = [
     ]
   },
   {
+    id: "cybersecurity-specialist",
+    title: "Cybersecurity Specialist & Ethical Hacker",
+    category: "Technology",
+    description: "Protects organizational infrastructure, networks, and applications from cyber threats. They conduct vulnerability assessments, penetration testing, and design secure network fabrics to defend data assets.",
+    salary: "$90,000 - $160,000",
+    salaryTrend: [90, 105, 122, 140, 160],
+    demand: "Extremely High (+32% growth)",
+    tags: ["In Demand", "High Paying", "Critical Security"],
+    skills: ["Coding", "Problem Solving", "Math/Analysis"],
+    interests: ["Technology", "Science"],
+    dayInLife: [
+      { time: "08:30 AM", task: "Reviewing firewall logs and intrusion detection (IDS) alerts." },
+      { time: "10:00 AM", task: "Executing a simulated network penetration test on a staging server." },
+      { time: "12:00 PM", task: "Analyzing an anomalous spike in database connection queries." },
+      { time: "02:00 PM", task: "Briefing software architects on secure API endpoint routing structures." },
+      { time: "04:30 PM", task: "Drafting an incident response patch review report." }
+    ],
+    roadmap: [
+      {
+        phase: "Phase 1: Networking & Systems",
+        title: "OS & Port Protocols",
+        description: "Understand computer communication models, routing paths, and command line tools.",
+        checklist: [
+          "Master TCP/IP subnet models, ports, and DNS protocols",
+          "Learn Linux system administration and Bash scripting",
+          "Understand standard networking tools (Ping, Traceroute, Netstat)",
+          "Get certified in CompTIA Network+ fundamentals"
+        ]
+      },
+      {
+        phase: "Phase 2: Security Core",
+        title: "Vulnerabilities & Hardening",
+        description: "Identify key system vulnerabilities and configure basic firewalls/encryption.",
+        checklist: [
+          "Study OWASP Top 10 web application vulnerabilities (SQL Injection, XSS, CSRF)",
+          "Learn to scan ports and services using Nmap securely",
+          "Understand encryption standards (AES, RSA, Public-Key Infrastructure)",
+          "Study CompTIA Security+ concepts"
+        ]
+      },
+      {
+        phase: "Phase 3: Offense & Defense Lab",
+        title: "Penetration Testing & Auditing",
+        description: "Learn ethical hacking methodologies, exploit scripting, and malware analysis.",
+        checklist: [
+          "Practice offensive setups using Kali Linux tools",
+          "Complete PortSwigger Web Security Academy labs",
+          "Understand buffer overflows and write exploit scripts in Python",
+          "Build labs on Hack The Box or TryHackMe to study live threats"
+        ]
+      },
+      {
+        phase: "Phase 4: Credentials & Launch",
+        title: "Professional Hacking & Audits",
+        description: "Earn advanced security certifications and perform enterprise compliance audits.",
+        checklist: [
+          "Prepare for and attempt the OSCP (Offensive Security Certified Professional)",
+          "Learn security auditing guidelines (ISO 27001, SOC 2, NIST Framework)",
+          "Draft 2 comprehensive mock network penetration test reports",
+          "Practice capture the flag (CTF) events and prepare security briefs"
+        ]
+      }
+    ],
+    resources: [
+      { name: "PortSwigger Web Security Academy (Free)", type: "Lab Platform", link: "https://portswigger.net/web-security" },
+      { name: "TryHackMe Ethical Hacking Paths", type: "Interactive Labs", link: "https://tryhackme.com" },
+      { name: "OWASP Top 10 Vulnerability Reference", type: "Reference Guide", link: "https://owasp.org/www-project-top-ten/" }
+    ]
+  },
+  {
     id: "ux-ui-designer",
     title: "UX/UI Designer",
     category: "Creative Arts",

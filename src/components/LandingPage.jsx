@@ -131,6 +131,12 @@ export default function LandingPage({ onStartQuiz }) {
           </div>
         </div>
       </div>
+      
+      {/* Footer Credit */}
+      <footer style={{ marginTop: '6rem', paddingTop: '2rem', borderTop: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+        <span>NextStepAI © 2026</span>
+        <span>Designed & Developed by <strong style={{ color: 'var(--primary-light)' }}>Pratyush Pandey</strong></span>
+      </footer>
     </div>
   );
 }

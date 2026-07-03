@@ -157,6 +157,10 @@ export default function App() {
               <LogOut size={16} />
             </button>
           </div>
+
+          <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', textAlign: 'center', borderTop: '1px solid var(--border-color)', paddingTop: '0.75rem', width: '100%' }}>
+            Developed by <strong style={{ color: 'var(--primary-light)' }}>Pratyush Pandey</strong>
+          </div>
         </div>
       </aside>
 

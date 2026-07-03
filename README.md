@@ -1,59 +1,98 @@
 # NextStepAI — AI-Powered Career Guidance & Path Planner
 
-NextStepAI is an advanced, interactive AI-powered career counseling platform designed to guide students and early-career professionals in discovering their optimal career trajectories. By mapping individual skills, interests, and professional preferences against an evolving market taxonomy, NextStepAI generates dynamic, step-by-step educational roadmaps, interactive salary projection visualizations, contextual AI counseling, and a comprehensive resume gap audit.
+<p align="center">
+  <img src="./public/nextstepai_logo.png" alt="NextStepAI Logo" width="100" height="100" style="border-radius: 20px; box-shadow: 0 0 20px rgba(138, 79, 255, 0.45);"/>
+</p>
 
-Developed with a modular React architecture, a robust client-side heuristics engine, and highly-optimized custom CSS components, NextStepAI delivers an enterprise-grade user experience (UX) featuring fluid micro-animations, glassmorphic layouts, and responsive panels.
+<h3 align="center">NextStepAI</h3>
+<p align="center">
+  <strong>An Enterprise-Grade Career Guidance, Technical Interview Prep & Cybersecurity Auditing Console</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19.0-blue?style=for-the-badge&logo=react" alt="React Badge"/>
+  <img src="https://img.shields.io/badge/Vite-8.0-purple?style=for-the-badge&logo=vite" alt="Vite Badge"/>
+  <img src="https://img.shields.io/badge/Cybersecurity-Audits-red?style=for-the-badge&logo=shield" alt="Cybersecurity Badge"/>
+  <img src="https://img.shields.io/badge/JWT_Session-Secured-green?style=for-the-badge" alt="Security Badge"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License Badge"/>
+</p>
+
+---
+
+## 👤 Lead Developer
+*   **Name**: **Pratyush Pandey**
+*   **Specialization**: **Full-Stack Software Engineer & Cybersecurity Auditor**
+*   **Target Roles**: Systems Engineer / Specialist Programmer / Digital Specialist Engineer (Infosys)
+
+---
+
+## 📸 Interface Preview
+Below is a high-fidelity visual mockup of the NextStepAI dashboard interface showing match lists, interactive roadmap timelines, and the counselor chatbot:
+
+<p align="center">
+  <img src="./public/nextstepai_dashboard_mockup.png" alt="NextStepAI Dashboard Mockup" width="700" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 20px 40px rgba(0,0,0,0.5);"/>
+</p>
+
+---
+
+## 🎯 Project Overview & Mission
+
+**NextStepAI** is a futuristic, highly responsive single-page web application designed to eliminate career choice ambiguity. It targets the core issue of millions of students selecting careers without structured, personalized guidance. 
+
+By integrating **skill mapping, interest profiling, interactive roadmaps, dynamic salary trends (localized to INR/LPA), customized interview simulators, and real-time cybersecurity audits**, NextStepAI stands out as an elite, production-ready portfolio project showcasing end-to-end frontend expertise and domain security knowledge.
 
 ---
 
 ## 🚀 Key Features
 
-*   **📊 Talent & Interests Profiling Quiz**: A highly interactive, 3-step cognitive assessment mapping interests, technical capabilities, and workplace environment preferences.
-*   **🎯 Adaptive Heuristic Recommendation Engine**: Evaluates user profiles against a multidimensional career taxonomy (Software Engineering, UI/UX, AI/ML, Bioinformatics, Quantitative Analysis, Green Energy, Technical Writing, etc.) with real-time similarity matching scores.
-*   **🗺️ Interactive Education Roadmaps**: Generates sequential, phase-by-phase learning paths for each career, complete with completion trackers and vetted learning resources.
-*   **📈 SVG Salary & Market Demand Visualizer**: Renders interactive, animated custom SVG charts displaying 5-year salary progression and market growth statistics.
-*   **💬 Contextual AI Counselor Chatbot**: Simulates a dedicated career advisor. Features custom prompt recommendations, message typing indicators, and markdown formatting, with answers calibrated to the student's quiz profile.
-*   **🔍 Resume Strength Auditor**: An automated review panel where students paste their achievements to receive an instant alignment score, highlight matching keywords, and pinpoint skill gaps with actionable roadmap additions.
-*   **🔑 Secure Session Authentication Portal**: Integrates a glassmorphic Login/Register gate checking email/password criteria and storing sessions safely in LocalStorage (JWT-handshake mockup) with a Secure Token Active status.
-*   **🎓 Technical Interview Simulator (Infosys Prep)**: A mock evaluation module where students solve technical conceptual questions for their target track and receive instant grades (out of 10), keyword alignment feedback, and senior-engineer model answers.
-*   **🛡️ Cybersecurity Threat & Cryptography Lab**: A dedicated, interactive security suite featuring: (1) **HTTP Header & SSL Auditor** to analyze raw response headers for missing security guards (CSP, HSTS, X-Frame-Options, XSS sniffing banners) with Express code recommendations, and (2) **Password Entropy & Hash Lab** calculating real-time Shannon Entropy bits, botnet GPU crack durations, and client-side SHA-256 digests via the Web Crypto API.
+*   **🔑 Secure Session Authentication Portal**: Protects all paths with a glassmorphic Login/Register gate. Validates credentials and mounts a secure JWT-mockup session, preserving user profiles dynamically in LocalStorage.
+*   **📊 Talent & Interests Profiling Quiz**: An interactive, 3-step assessment tracking cognitive preferences, technical competencies, and workplace environments to score career matches.
+*   **🎯 Adaptive Heuristic Recommendation Engine**: Matches user responses against a multidimensional career database, calculating precise similarity quotients.
+*   **🗺️ Interactive Education Roadmaps**: Generates step-by-step career timelines complete with interactive check-boxes and vetted learning portals. Saves roadmap checklists persistently.
+*   **📈 SVG Salary & Market Demand Visualizer**: Renders custom-coded, animated SVG graphs displaying 5-year salary growth projections **in Indian Rupees (INR) Lakhs Per Annum (LPA)**.
+*   **🎓 Technical Interview Simulator (Infosys Prep)**: Calibrates challenging mock interview questions for your selected career. Scores answers out of 10, highlights keyword hits/gaps, and details senior-engineer model responses.
+*   **🛡️ Cybersecurity Threat & Cryptography Lab**: A dedicated auditor dashboard containing:
+    - *HTTP Header & SSL Auditor*: Scans raw response headers for missing security guards (CSP, HSTS, X-Frame-Options, X-Content-Type-Options) with risk levels and Express configurations.
+    - *Password Entropy & Hash Lab*: Calculates Shannon Entropy bits, estimates Botnet crack durations, and computes client-side **SHA-256** digests via browser Web Crypto APIs.
+*   **💬 Contextual AI Counselor Chatbot**: Simulates a dedicated mentor, pre-feeding quiz data to answers questions about certifications, portfolios, and transitions.
 
 ---
 
-## 🛠️ Technical Stack & Architecture
+## 📊 Application Architecture & Flow
 
-*   **Frontend Library**: React (v19)
-*   **Scaffolding & Build Tool**: Vite (v8) — delivers lightning-fast hot module replacement (HMR) and optimized assets compilation.
-*   **Styling Engine**: Custom CSS variables, HSL color tokens, and responsive flexbox layouts. Avoids external framework bloat to achieve fluid, hardware-accelerated animations and consistent cross-browser performance.
-*   **Icons Library**: Lucide React
-*   **State Management**: React Component Hooks (`useState`, `useEffect`, `useRef`) for centralized student profile coordination.
+The following Mermaid diagram maps the layout routing and secure state-synchronization pathways inside the app:
 
-### Code Directory Structure
-```
-d:/New folder (7)/
-├── public/                  # Static assets
-├── src/
-│   ├── components/
-│   │   ├── AICounselor.jsx       # Chatbot counselor module
-│   │   ├── CareerDashboard.jsx   # Matches & interactive roadmaps list
-│   │   ├── CareerQuiz.jsx        # Multidimensional assessment wizard
-│   │   ├── LandingPage.jsx       # Modern marketing home view
-│   │   └── ResumeAnalyzer.jsx    # Skill keyword match and gap finder
-│   ├── data/
-│   │   └── careersData.js        # Career taxonomy database & matching formulas
-│   ├── App.jsx                   # Central routing & state hub
-│   ├── index.css                 # Design system, themes, and global layouts
-│   └── main.jsx                  # React application mount script
-├── index.html                    # HTML entry point and Google Fonts definitions
-├── package.json                  # Dependencies configuration
-└── vite.config.js                # Vite bundler configurations
+```mermaid
+graph TD
+    A[User Visit] --> B(Auth Gate - JWT Mock)
+    B --> C{Authenticated?}
+    C -- No --> B
+    C -- Yes --> D[Landing Page - Credits by Pratyush]
+    D --> E[Career Quiz Assessment]
+    E --> F[Heuristic Scoring Engine]
+    F --> G[Matches Dashboard]
+    G --> H[Interactive Roadmaps / Checklists]
+    G --> I[Infosys Mock Interview Prep]
+    G --> J[Cybersecurity Threat & Cryptography Lab]
+    G --> K[AI Advisor Chatbot Console]
 ```
 
 ---
 
-## 💻 Installation & Setup
+## 🛠️ Technical Stack
 
-Ensure you have [Node.js](https://nodejs.org/) installed (v18 or higher recommended).
+*   **Frontend Core**: React (v19)
+*   **Build Environment**: Vite (v8) — delivers rapid HMR configurations and optimized compilations.
+*   **Styling Architecture**: Custom CSS variables, responsive grids, and hardware-accelerated animations. 100% clean Vanilla CSS.
+*   **Security & Encryption APIs**: Web Crypto API (SubtleCrypto)
+*   **Icons Framework**: Lucide React
+*   **Data Models**: Structured JSON schemas for careers data and interview sheets.
+
+---
+
+## 💻 Installation & Local Deployment
+
+Ensure you have [Node.js](https://nodejs.org/) installed (v18 or higher).
 
 ### 1. Clone the Repository
 ```bash
@@ -67,27 +106,25 @@ npm install
 ```
 
 ### 3. Run Development Server
-Start the local server with hot reloading enabled:
 ```bash
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### 4. Build for Production
-To bundle and optimize the application files for deployment:
+### 4. Build Production Bundle
+To compile and compress the assets:
 ```bash
 npm run build
 ```
-Production assets will be built and output to the `/dist` directory.
 
 ---
 
-## 💼 Core Design Patterns & Highlights (Industry-Level Quality)
+## 💼 Core Design Patterns & highlights (Infosys Interview Ready)
 
-1.  **State Synchronization**: The app maintains a centralized, single-source-of-truth state for the user's profile. When a student completes the quiz, their profiles are immediately mapped to the chat console, enabling the AI Counselor to speak to them contextually about their strengths.
-2.  **Custom Data Visualization**: Renders salary graphs natively using raw SVG vectors and CSS classes, avoiding high-weight chart packages and keeping package load size small for fast page speeds.
-3.  **Heuristic Keyword Scanning**: The Resume Auditor uses substring boundary matching to identify missing key technologies and dynamically creates recommended learning milestones.
-4.  **Premium Glassmorphic UI**: Uses custom backdrop-blur values, semi-transparent gradients, glowing box shadows, and spring-based timing transitions.
+1.  **State Synchronization**: React hooks propagate the profile states. For instance, completing the quiz automatically updates the counselor's knowledge base and matches the interview simulator's default focus.
+2.  **Low-Weight Visualizations**: Renders salary graphs natively using raw SVG templates and responsive CSS classes, avoiding high-weight visualization packages and maximizing page loading performance.
+3.  **Local Storage Persistence**: Save user logins and roadmap checks persistently to ensure that progress is preserved upon browser refreshes.
+4.  **Hardware Cryptography**: Avoids external hashing packages by calling the browser's native subtle cryptographical APIs for secure, sandbox-compliant SHA-256 calculation.
 
 ---
 

@@ -35,6 +35,12 @@ Below is a high-fidelity visual mockup of the NextStepAI dashboard interface sho
 
 ---
 
+## 🌐 Live Deployments
+*   **Vercel Production Domain**: [https://nextstepai-tan.vercel.app/](https://nextstepai-tan.vercel.app/)
+*   **GitHub Pages Domain**: [https://pratyushpandey31.github.io/AI-PATH-FINDER/](https://pratyushpandey31.github.io/AI-PATH-FINDER/)
+
+---
+
 ## 🎯 Project Overview & Mission
 
 **NextStepAI** is a futuristic, highly responsive single-page web application designed to eliminate career choice ambiguity. It targets the core issue of millions of students selecting careers without structured, personalized guidance. 

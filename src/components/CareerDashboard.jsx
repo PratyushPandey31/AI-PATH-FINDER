@@ -1,6 +1,6 @@
 // NextStepAI - Career Dashboard and Roadmap Explorer Component
 import React, { useState } from 'react';
-import { ChevronRight, ArrowLeft, Calendar, DollarSign, BookOpen, Compass, CheckCircle2, MessageSquare } from 'lucide-react';
+import { ChevronRight, ArrowLeft, Calendar, IndianRupee, BookOpen, Compass, CheckCircle2, MessageSquare } from 'lucide-react';
 
 export default function CareerDashboard({ careers, onRetakeQuiz, onSelectChatCareer }) {
   const [selectedCareer, setSelectedCareer] = useState(null);
@@ -153,7 +153,7 @@ export default function CareerDashboard({ careers, onRetakeQuiz, onSelectChatCar
             {/* Custom Interactive Salary Trend */}
             <div className="glass-card detail-block">
               <div className="detail-block-title">
-                <DollarSign size={20} style={{ color: 'var(--primary-light)' }} />
+                <IndianRupee size={20} style={{ color: 'var(--primary-light)' }} />
                 <span>Salary Progression & Demand</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -168,17 +168,17 @@ export default function CareerDashboard({ careers, onRetakeQuiz, onSelectChatCar
               </div>
               
               <div style={{ marginTop: '1rem' }}>
-                <span className="career-salary-label" style={{ marginBottom: '0.5rem', display: 'block' }}>5-Year Salary Growth Projection (K$)</span>
+                <span className="career-salary-label" style={{ marginBottom: '0.5rem', display: 'block' }}>5-Year Salary Growth Projection (LPA)</span>
                 <div className="chart-container">
                   {career.salaryTrend.map((salaryVal, idx) => {
-                    const pctHeight = (salaryVal / 220) * 100; // max value in list is 220
+                    const pctHeight = (salaryVal / 30) * 100; // max value is 30 LPA
                     return (
                       <div key={idx} className="chart-bar-wrapper">
                         <div 
                           className="chart-bar" 
                           style={{ height: `${pctHeight}%` }}
                         >
-                          <div className="chart-bar-tooltip">${salaryVal}K/yr</div>
+                          <div className="chart-bar-tooltip">₹{salaryVal} LPA</div>
                         </div>
                         <span className="chart-bar-label">Yr {idx + 1}</span>
                       </div>

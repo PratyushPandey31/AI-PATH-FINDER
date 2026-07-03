@@ -261,19 +261,20 @@ p {
 
 /* Glass Card */
 .glass-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: linear-gradient(135deg, rgba(22, 19, 48, 0.65) 0%, rgba(13, 10, 28, 0.45) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-lg);
-  transition: var(--transition-normal);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), var(--shadow-lg);
+  transition: all var(--transition-normal);
   overflow: hidden;
 }
 
 .glass-card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: var(--shadow-glow), var(--shadow-lg);
-  transform: translateY(-2px);
+  border-color: rgba(138, 79, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(138, 79, 255, 0.12), var(--shadow-glow), var(--shadow-lg);
+  transform: translateY(-4px) scale(1.008);
 }
 
 /* Buttons */

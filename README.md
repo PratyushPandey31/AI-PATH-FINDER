@@ -36,7 +36,7 @@ Below is a high-fidelity visual mockup of the NextStepAI dashboard interface sho
 ---
 
 ## 🌐 Live Deployments
-*   **Vercel Production Domain**: [https://nextstepai-tan.vercel.app/](https://nextstepai-tan.vercel.app/)
+*   **Vercel Production Domain**: [https://nextstepai-pratyush.vercel.app/](https://nextstepai-pratyush.vercel.app/)
 *   **GitHub Pages Domain**: [https://pratyushpandey31.github.io/AI-PATH-FINDER/](https://pratyushpandey31.github.io/AI-PATH-FINDER/)
 
 ---

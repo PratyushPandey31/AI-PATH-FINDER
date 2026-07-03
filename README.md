@@ -58,6 +58,49 @@ By integrating **skill mapping, interest profiling, interactive roadmaps, dynami
 
 ---
 
+## 📖 Detailed Feature Walkthrough: What It Does & How It Works
+
+NextStepAI acts as a complete digital career companion. Below is a detailed breakdown of what the application does and how it guides the student step-by-step:
+
+### 1. 🔑 Secure Entry (Authentication Gate)
+*   **What it does**: Restricts access to authenticated users to protect student profiles.
+*   **How it works**: When a user visits the site, the app loads `AuthPage` first, showing a glassmorphic login/signup prompt. Once they log in or create an account, the app issues a mock secure session token and saves their session in LocalStorage. This keeps their session active even if the browser is closed or refreshed.
+
+### 2. 📋 Talent Assessment (The Career Quiz)
+*   **What it does**: Maps the user's skills, interests, and working styles.
+*   **How it works**: The user answers a 3-step quiz:
+    *   *Interests*: (e.g. Technology, Creative Arts, Business, Science, Writing)
+    *   *Skills*: (e.g. Coding, Logic, Design, Writing, Math, Communication, Leadership)
+    *   *Work Preferences*: (e.g. Remote work, High Earning roles, Creative Autonomy)
+*   When they click "Generate My Careers", our weighted scoring engine calculates overlap ratios between their profile and 9+ standard career models.
+
+### 3. 🎯 Career Recommendation Dashboard & Roadmap Explorer
+*   **What it does**: Displays matched careers and provides step-by-step preparation guides.
+*   **How it works**: The app displays matching careers sorted by score percentage (e.g. "94% Match"). Clicking on a career opens a comprehensive dashboard featuring:
+    *   **LPA Salary Growth Charts**: An interactive, custom-drawn SVG bar graph showing projected salary increases over 5 years in Indian Rupees (INR) Lakhs Per Annum.
+    *   **Sequential Learning Path Checklists**: A 4-phase sequential learning roadmap. Students can tick off completed milestones (e.g. "Learn HTML/CSS", "Build REST APIs") to track progress.
+    *   **Day in the Life Schedule**: Displays a typical hourly working schedule (e.g. standup, debugging, deployment logs) to simulate real-world job expectations.
+    *   **Vetted Learning Resources**: Links to high-quality tutorials and documentation platforms.
+
+### 4. 🎓 Technical Interview Simulator (Mock Interview Board)
+*   **What it does**: Simulates a live technical recruitment interview round (calibrated for Infosys Specialist Engineer/Programmer positions).
+*   **How it works**:
+    *   The app fetches technical questions matching the user's selected career path.
+    *   The user types their technical answer and clicks "Evaluate My Answer".
+    *   The client-side analysis engine parses the input text for key terms, calculates a conceptual alignment score (out of 10), lists strengths, and provides a **Senior Engineer Model Solution** to help the student learn the correct answers.
+
+### 5. 🛡️ Cybersecurity Threat Auditor & Cryptography Lab
+*   **What it does**: Audits server settings and analyzes cryptographic password strength (ideal for showing security domain expertise).
+*   **How it works**:
+    *   **Server Headers Auditor**: Paste raw HTTP response headers, and the scanner highlights critical configuration security issues (like missing CSP, HSTS, X-Frame-Options, or sniffing headers). It provides Express JS middleware snippets for remediation.
+    *   **Password Entropy & Hash Lab**: Dynamically evaluates password strength in bits of entropy using Shannon's equation, calculates botnet brute-force cracking durations, and computes secure **SHA-256** hashes instantly on keypress.
+
+### 🔍 Resume Strength Auditor
+*   **What it does**: Compares the user's resume keywords against target career tracks.
+*   **How it works**: The user pastes their resume text. The auditor highlights matching keywords, displays missing skills, and lists actionable project recommendations.
+
+---
+
 ## 🚀 Key Features
 
 *   **🔑 Secure Session Authentication Portal**: Protects all paths with a glassmorphic Login/Register gate. Validates credentials and mounts a secure JWT-mockup session, preserving user profiles dynamically in LocalStorage.

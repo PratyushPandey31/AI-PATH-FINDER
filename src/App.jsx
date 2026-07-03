@@ -1,12 +1,13 @@
 // NextStepAI - Root App Component
 import React, { useState } from 'react';
-import { Home, Compass, MessageSquare, Cpu, Clipboard, Zap, LogOut, ShieldCheck } from 'lucide-react';
+import { Home, Compass, MessageSquare, Cpu, Clipboard, Zap, LogOut, ShieldCheck, Award } from 'lucide-react';
 import LandingPage from './components/LandingPage';
 import CareerQuiz from './components/CareerQuiz';
 import CareerDashboard from './components/CareerDashboard';
 import AICounselor from './components/AICounselor';
 import ResumeAnalyzer from './components/ResumeAnalyzer';
 import AuthPage from './components/AuthPage';
+import InterviewPrep from './components/InterviewPrep';
 import { calculateMatches } from './data/careersData';
 
 export default function App() {
@@ -92,6 +93,12 @@ export default function App() {
             <Compass className="nav-item-icon" /> Career Matches
           </li>
           <li 
+            className={`nav-item ${currentTab === 'interview' ? 'active' : ''}`}
+            onClick={() => setCurrentTab('interview')}
+          >
+            <Award className="nav-item-icon" /> Interview Prep
+          </li>
+          <li 
             className={`nav-item ${currentTab === 'counselor' ? 'active' : ''}`}
             onClick={() => setCurrentTab('counselor')}
           >
@@ -154,6 +161,7 @@ export default function App() {
               {currentTab === 'home' && "Discover Your Potential"}
               {currentTab === 'quiz' && "Career Assessment Quiz"}
               {currentTab === 'dashboard' && "Career Roadmap Dashboard"}
+              {currentTab === 'interview' && "Infosys Tech Mock Prep"}
               {currentTab === 'counselor' && "AI Advisor Console"}
               {currentTab === 'analyzer' && "Resume & Skill Match Audit"}
             </h1>
@@ -161,6 +169,7 @@ export default function App() {
               {currentTab === 'home' && "Your personalized career path architect powered by AI."}
               {currentTab === 'quiz' && "Complete the questions below to map your key talent zones."}
               {currentTab === 'dashboard' && "Track your customized roadmaps and inspect salaries."}
+              {currentTab === 'interview' && "Test your technical communication and coding concepts to crack recruitments."}
               {currentTab === 'counselor' && "Consult with our AI career guide for details on skill building."}
               {currentTab === 'analyzer' && "Analyze your achievements to optimize keywords and find gaps."}
             </span>
@@ -199,6 +208,10 @@ export default function App() {
               onRetakeQuiz={handleRetakeQuiz} 
               onSelectChatCareer={handleSelectChatCareer}
             />
+          )}
+
+          {currentTab === 'interview' && (
+            <InterviewPrep highestMatchCareer={careers[0]} />
           )}
 
           {currentTab === 'counselor' && (

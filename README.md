@@ -17,6 +17,15 @@
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License Badge"/>
 </p>
 
+<p align="center">
+  <a href="https://nextstepai-pratyush.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Deployed_on-Vercel-black?style=for-the-badge&logo=vercel" alt="Deployed on Vercel"/>
+  </a>
+  <a href="https://pratyushpandey31.github.io/AI-PATH-FINDER/" target="_blank">
+    <img src="https://img.shields.io/badge/Deployed_on-GitHub_Pages-blue?style=for-the-badge&logo=github" alt="Deployed on GitHub Pages"/>
+  </a>
+</p>
+
 ---
 
 ## 👤 Lead Developer

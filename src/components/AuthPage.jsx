@@ -64,9 +64,11 @@ export default function AuthPage({ onLogin }) {
       }}>
         {/* Logo */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2.5rem', textAlign: 'center' }}>
-          <div className="sidebar-logo-icon" style={{ width: '48px', height: '48px', marginBottom: '1rem' }}>
-            <Zap size={26} style={{ fill: 'white' }} />
-          </div>
+          <img 
+            src="/nextstepai_logo.png" 
+            alt="NextStepAI Logo" 
+            style={{ width: '56px', height: '56px', borderRadius: '12px', marginBottom: '1rem', objectFit: 'cover', boxShadow: '0 0 20px var(--primary-glow)' }} 
+          />
           <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-heading)', marginBottom: '0.25rem' }}>NextStepAI</h2>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
             🔒 Secured Career Portal Session Access

@@ -68,9 +68,11 @@ export default function App() {
       {/* Sidebar Navigation */}
       <aside className="sidebar">
         <div className="sidebar-logo">
-          <div className="sidebar-logo-icon">
-            <Zap size={22} style={{ fill: 'white' }} />
-          </div>
+          <img 
+            src="/nextstepai_logo.png" 
+            alt="NextStepAI Logo" 
+            style={{ width: '38px', height: '38px', borderRadius: '10px', objectFit: 'cover', boxShadow: '0 0 15px var(--primary-glow)' }} 
+          />
           <span className="sidebar-logo-text">NextStepAI</span>
         </div>
 

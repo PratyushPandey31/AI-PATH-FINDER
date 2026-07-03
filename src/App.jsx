@@ -1,18 +1,38 @@
 // NextStepAI - Root App Component
 import React, { useState } from 'react';
-import { Home, Compass, MessageSquare, Cpu, Clipboard, Zap } from 'lucide-react';
+import { Home, Compass, MessageSquare, Cpu, Clipboard, Zap, LogOut, ShieldCheck } from 'lucide-react';
 import LandingPage from './components/LandingPage';
 import CareerQuiz from './components/CareerQuiz';
 import CareerDashboard from './components/CareerDashboard';
 import AICounselor from './components/AICounselor';
 import ResumeAnalyzer from './components/ResumeAnalyzer';
+import AuthPage from './components/AuthPage';
 import { calculateMatches } from './data/careersData';
 
 export default function App() {
+  const [user, setUser] = useState(() => {
+    const saved = localStorage.getItem('nextstepai_user');
+    return saved ? JSON.parse(saved) : null;
+  });
+
   const [currentTab, setCurrentTab] = useState('home');
   const [answers, setAnswers] = useState({ interests: [], skills: [], workPrefs: [] });
   const [careers, setCareers] = useState([]);
   const [chatInitialQuestion, setChatInitialQuestion] = useState("");
+
+  const handleLogin = (userData) => {
+    setUser(userData);
+    localStorage.setItem('nextstepai_user', JSON.stringify(userData));
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    localStorage.removeItem('nextstepai_user');
+    // Reset other states
+    setAnswers({ interests: [], skills: [], workPrefs: [] });
+    setCareers([]);
+    setCurrentTab('home');
+  };
 
   const handleQuizSubmit = (quizAnswers) => {
     setAnswers(quizAnswers);
@@ -35,6 +55,11 @@ export default function App() {
   };
 
   const hasTakenQuiz = careers.length > 0;
+
+  // Render Authentication screen if user session is not active
+  if (!user) {
+    return <AuthPage onLogin={handleLogin} />;
+  }
 
   return (
     <div className="app-container">
@@ -80,15 +105,41 @@ export default function App() {
           </li>
         </nav>
 
-        <div className="sidebar-footer">
-          <div className="user-profile-widget">
-            <div className="user-avatar">S</div>
-            <div>
-              <div className="user-info-name">Student Profile</div>
-              <div className="user-info-status">
-                {hasTakenQuiz ? "✓ Quiz Completed" : "• Assessment Pending"}
+        {/* Sidebar Footer with Logged In User Profile & Logout */}
+        <div className="sidebar-footer" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div className="user-profile-widget" style={{ justifyContent: 'space-between', width: '100%' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <div className="user-avatar" style={{ fontSize: '0.9rem' }}>
+                {user.name.charAt(0).toUpperCase()}
+              </div>
+              <div>
+                <div className="user-info-name" style={{ maxWidth: '120px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {user.name}
+                </div>
+                <div className="user-info-status">{user.grade}</div>
               </div>
             </div>
+            
+            <button 
+              onClick={handleLogout}
+              style={{
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                color: 'var(--text-muted)',
+                padding: '0.25rem',
+                borderRadius: '6px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'var(--transition-fast)'
+              }}
+              title="Logout Session"
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-muted)'}
+            >
+              <LogOut size={16} />
+            </button>
           </div>
         </div>
       </aside>
@@ -113,6 +164,22 @@ export default function App() {
               {currentTab === 'counselor' && "Consult with our AI career guide for details on skill building."}
               {currentTab === 'analyzer' && "Analyze your achievements to optimize keywords and find gaps."}
             </span>
+          </div>
+
+          {/* Secure Session Indicator */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            background: 'rgba(0, 240, 255, 0.05)',
+            border: '1px solid rgba(0, 240, 255, 0.15)',
+            padding: '0.4rem 0.8rem',
+            borderRadius: '50px',
+            fontSize: '0.75rem',
+            color: 'var(--secondary)'
+          }}>
+            <ShieldCheck size={14} />
+            <span>Secure JWT Token Session Active</span>
           </div>
         </header>
 

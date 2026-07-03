@@ -15,6 +15,7 @@ Developed with a modular React architecture, a robust client-side heuristics eng
 *   **💬 Contextual AI Counselor Chatbot**: Simulates a dedicated career advisor. Features custom prompt recommendations, message typing indicators, and markdown formatting, with answers calibrated to the student's quiz profile.
 *   **🔍 Resume Strength Auditor**: An automated review panel where students paste their achievements to receive an instant alignment score, highlight matching keywords, and pinpoint skill gaps with actionable roadmap additions.
 *   **🔑 Secure Session Authentication Portal**: Integrates a glassmorphic Login/Register gate checking email/password criteria and storing sessions safely in LocalStorage (JWT-handshake mockup) with a Secure Token Active status.
+*   **🎓 Technical Interview Simulator (Infosys Prep)**: A mock evaluation module where students solve technical conceptual questions for their target track and receive instant grades (out of 10), keyword alignment feedback, and senior-engineer model answers.
 
 ---
 

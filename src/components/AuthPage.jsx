@@ -65,7 +65,7 @@ export default function AuthPage({ onLogin }) {
         {/* Logo */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2.5rem', textAlign: 'center' }}>
           <img 
-            src="/nextstepai_logo.png" 
+            src="./nextstepai_logo.png" 
             alt="NextStepAI Logo" 
             style={{ width: '56px', height: '56px', borderRadius: '12px', marginBottom: '1rem', objectFit: 'cover', boxShadow: '0 0 20px var(--primary-glow)' }} 
           />
